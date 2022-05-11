@@ -1,0 +1,27 @@
+
+
+:root{
+
+    --background: #98b6ff;
+    --primary: #031955;
+    --secondary: #344ea2;
+    --accent-1: #eb05fe;
+    --accent-2: #3280ed;
+
+
+
+
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+
+
