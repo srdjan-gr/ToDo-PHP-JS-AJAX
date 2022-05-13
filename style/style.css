@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+:root{
+
+    --background: #98b6ff;
+    --primary: #031955;
+    --secondary: #344ea2;
+    --secondary-dim: #455a99;
+    --secondary-dim-light: #a5bafa;
+    --accent-1: #f041ff;
+    --accent-2: #3280ed;
+    --accent-3: #32edbe;
+    --accent-4: #2c7ae7;
+    --accent-5: #3280ed;
+
+
+    --white: #f5f5f5;
+    --white-dim: #dfdfdf;
+
+    --fontsize-s: 1rem;
+    --fontsize-m: 1.2rem;
+    --fontsize-l: 1.6rem;
+    --fontsize-xl: 2.4rem;
+
+}
+
+/* Clase */
+/* ======================== */
+.f-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ======================== */
+
+h3{
+    color: var(--white-dim);
+    font-weight: 400;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    position: relative;
+}
+
+/* Start Kartica sa opcijama */
+.cart-options {
+    background-color: var(--primary);
+    width: 30rem;
+    height: 62rem;
+    padding: 3.6rem;
+    border-radius: 4rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, .3);
+}
+
+.back-icon ion-icon{
+    border-radius: 50%;
+    border: 1px solid var(--secondary-dim);
+    font-size: 1.4rem;
+    padding: 1rem;
+    --ionicon-stroke-width: 1rem;
+    margin-top: 1.6rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.user-image{
+    width:  7rem;
+    height: 7rem;
+    position: relative;
+}
+
+.ring-pink{
+    border-radius: 50%;
+    border: 2px solid var(--accent-1);
+    box-shadow: 0px 0px 3px 1px rgba(239, 65, 255, 0.6);
+    width: 7rem;
+    height: 7rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+
+}
+
+.ring-gray{
+    border-radius: 50%;
+    border: 2px solid var(--secondary-dim);
+    width: 7rem;
+    height: 7rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 8;
+}
+
+.user-image img{
+    width:  5.8rem;
+    height: 5.8rem;
+    border-radius: 50%;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.content ion-icon{
+    font-size: 1.6rem;
+    color: var(--secondary-dim);
+    --ionicon-stroke-width: 5rem;
+}
+
+.user-info{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 11rem;
+    width: 100%;
+}
+
+.user-info h1{
+    font-weight: 600;
+    font-size: var(--fontsize-xl);
+}
+
+.option-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 3.6rem;
+    width: 100%;
+}
+
+.option-container h3{
+    margin-left: 1.8rem;
+    cursor: pointer;
+    font-size: var(--fontsize-m);
+    font-weight: 400;
+}
+
+.option-container h3:hover{
+    color: var(--secondary-dim);
+    transition: all 0.1s linear;
+}
+
+.graphic-info h3{
+    color: var(--white);
+    font-weight: 600;
+}
+
+.graphic-info h4{
+    color: var(--secondary-dim);
+    font-weight: 600;
+    font-size: var(--fontsize-s);
+}
+
+.analitics{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2rem 0 2rem 0;
+    width: 100%;
+    height: 20rem;
+}
+/* Kraj Kartica sa opcijama */
+
+
+/* ======================================================================= */
+/* Pocetak desna kartica koja sluzi da sakrije gornju karticu kada je
+   ona pomerena u desno, kako bi se dobio vizuelni efekat */
+.cart-middle {
+    background-color: var(--background);
+    width: 30rem;
+    height: 54rem;
+    padding: 2rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    top: 4rem;
+    left: 30rem;  
+    z-index: 15;
+}
+/* Kraj desna kartica
+/* ======================================================================= */
+
+
+/* Start Kartica sa ToDo listom */
+.cart-list {
+    background-color: var(--secondary);
+    width: 30rem;
+    height: 62rem;
+    padding: 2rem;
+    border-radius: 4rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;  
+}
+
+#cardList{
+    display: block;
+    transform: translateX(22rem) scale(.86);
+    z-index: 13;
+}
+
+.todo-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.todo-menu ion-icon{
+    font-size: 1.8rem;
+    color: var(--secondary-dim-light);
+    cursor: pointer;
+}
+
+.todo-menu .menu-left ion-icon{
+    font-size: 2.8rem;
+}
+
+.todo-menu .menu-right ion-icon{
+    margin-left: 1.4rem;
+    --ionicon-stroke-width: 4rem;
+}
+
+.todo-user{
+    width: 100%;
+}
+
+.todo-user h1{
+    font-weight: 600;
+    font-size: var(--fontsize-xl);
+}
+
+label{
+    text-transform: uppercase;
+    color: var(--secondary-dim-light);
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.todo-categories{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 2.6rem;
+    margin-bottom: 2.6rem;
+}
+
+.todo-containers{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.categories-card label{
+    text-transform: capitalize;
+    color: var(--secondary-dim-light);
+    letter-spacing: 0px;
+}
+
+.todo-containers .categories-card{
+    width: 48%;
+    height: 7.4rem;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    background-color: var(--primary);
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, .5);
+    position: relative;
+}
+
+.progress-bars{
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.line-gray{
+    border: 1px solid var(--background);
+    position: absolute;
+    bottom: 0rem;
+    left: 0rem;
+    width: 100%;
+}
+
+.line-progress-pink{
+    border: 1px solid var(--accent-1);
+    box-shadow: 2px 0px 5px 1px rgba(239, 65, 255, 0.5);
+    position: absolute;
+    bottom: 0rem;
+    left: 0rem;
+    width: 55%;
+}
+
+.line-progress-blue{
+    border: 1px solid var(--accent-5);
+    box-shadow: 2px 0px 5px 1px rgba(50, 128, 237, 0.5);
+    position: absolute;
+    bottom: 0rem;
+    left: 0rem;
+    width: 64%;
+}
+
+.todo-list{
+    /* width: 100%; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.todo-single-task{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: .6rem;
+    width: 100%;
+    height: 4.8rem;
+    padding: 1.2rem;
+    background-color: var(--primary);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, .5);
+    border-radius: 1.5rem;
+}
+
+.task-icon{
+    margin: 0 1.5rem 0 .5rem;
+}
+
+.task-icon .task-todo{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 2px solid var(--accent-1);
+    box-shadow: 0px 0px 1px 1px rgba(239, 65, 255, 0.5);
+}
+
+.task-icon .task-done{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 2px solid var(--accent-3);
+    box-shadow: 0px 0px 1px 1px rgba(50, 237, 190, 0.5);
+    --ionicon-stroke-width: 5rem;
+}
+
+.task-icon .task-done ion-icon{
+    font-size: 1.2rem;
+}
+
+.task-text h3{
+    width: 100%;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+/* End Kartica sa ToDo listom */
+
+
+/* Start of Add Button */
+
+.addBtn{
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: var(--accent-1);
+    box-shadow: 0px 0px 8px 3px rgba(239, 65, 255, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 2.6rem;
+    right: 2rem;
+    cursor: pointer;
+}
+
+.addBtn ion-icon{
+    font-size: 2rem;
+}
+
+
+/* End of Add Button */

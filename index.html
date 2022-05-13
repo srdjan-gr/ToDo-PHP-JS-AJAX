@@ -8,19 +8,204 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <script src="style.css"></script>
+    <link rel="stylesheet" href="style/style.css">
 
 
     <title>ToDo</title>
 </head>
 <body>
     
+<div class="container">
+
+    <section>
+        <!--Pocetak Kartica sa opcijama -->
+        <div class="cart-options f-center">
+
+            <div class="back-icon f-center">
+                <ion-icon name="chevron-back-outline"></ion-icon> 
+            </div>
+            
+            <div class="content f-center">
+                <div class="user-image f-center">
+                    <span class="ring-gray"></span>
+                    <span class="ring-pink"></span>
+                    <img src="img/avatars/avatar.jpg" alt="">
+                </div>
+        
+                <div class="user-info">
+                    <h1>Srdjan <br> Grujeskovic</h1>
+                </div>
+        
+                <div class="options">
+                    <div class="option-container">
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                        <h3 id="temp">Templates</h3>
+                    </div>
+                    <div class="option-container">
+                        <ion-icon name="grid-outline"></ion-icon>
+                        <h3 id="categories">Categories</h3>
+                    </div>
+                    <div class="option-container">
+                        <ion-icon name="pie-chart-outline"></ion-icon>
+                        <h3 id="analitics">Analytics</h3>
+                    </div>
+        
+                </div>
+            </div>
+        
+            <div class="analitics">
+        
+                <div class="graphic">
+        
+                </div>
+        
+                <div class="graphic-info">
+                    <h4>Good</h4>
+                    <h2>Consistency</h2>
+                </div>
+        
+            </div>
+        </div>
+        <!--Kraj Kartica sa opcijama -->
+    </section>
+
+    <section>
+        <!--Pocetak Kartica sa opcijama -->
+        <div class="cart-middle f-center">
+
+        </div>
+        <!--Kraj Kartica sa opcijama -->
+    </section>
+
+
+    <!--Pocetak Kartica sa ToDo Listom -->
+    <div class="cart-list" id="cardList">
+
+        <nav>
+            <div class="todo-menu">
+                <div class="menu-left">
+                    <ion-icon name="reorder-two-outline"></ion-icon>
+                    <!-- <ion-icon name="pause-outline"></ion-icon> -->
+                </div>
+                <div class="menu-right">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <ion-icon name="notifications-outline"></ion-icon>
+                </div>
+            </div>
+        </nav>
+        
+        <header>
+            <div class="todo-user">
+                <h1>What's up, Srdjan!</h1>
+            </div>
+        </header>
+        
+        <section>
+            <div class="todo-categories">
+                <label for="" >Categories</label>
+
+                <div class="todo-containers">
+                    <div class="categories-card" id="bussines">
+                        <label for="">40 Task</label>
+                        <h2>Bussines</h2>
+                        <div class="progress-bars">
+                            <div class="line-gray"></div>
+                             <div class="line-progress-pink"></div> 
+                         </div>
+                    </div>
+
+                    <div class="categories-card">
+                        <label for="">40 Task</label>
+                        <h2>Bussines</h2>
+                        <div class="progress-bars">
+                           <div class="line-gray"></div>
+                            <div class="line-progress-blue"></div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sekcija ToDO lista zadataka -->
+        <section>
+            <div class="todo-list">
+                <label for="" >Today's tasks</label>
+
+                <!-- Jedan Task koji treba da se ponavlja sa WHILE -->
+                <div class="todo-single-task">
+                    <div class="task-icon">
+                        <div class="task-todo" id="todo"></div>
+                        <!-- <div class="task-done" id="done"><ion-icon name="checkmark-outline"></ion-icon></div> -->
+                    </div>
+                    <div class="task-text">
+                        <h3>Neki zadatak za danas!</h3>
+                    </div>
+                </div>
+                <!-- Jedan Task koji treba da se ponavlja sa WHILE -->
+                <!-- Jedan Task koji treba da se ponavlja sa WHILE -->
+                <div class="todo-single-task">
+                    <div class="task-icon">
+                        <!-- <div class="task-todo" id="todo"></div> -->
+                        <div class="task-done" id="done"><ion-icon name="checkmark-outline"></ion-icon></div>
+                    </div>
+                    <div class="task-text">
+                        <h3>Neki zadatak za danas!</h3>
+                    </div>
+                </div>
+                <!-- Jedan Task koji treba da se ponavlja sa WHILE -->
+                <!-- Jedan Task koji treba da se ponavlja sa WHILE -->
+                <div class="todo-single-task">
+                    <div class="task-icon">
+                        <div class="task-todo" id="todo"></div>
+                        <!-- <div class="task-done" id="done"><ion-icon name="checkmark-outline"></ion-icon></div> -->
+                    </div>
+                    <div class="task-text">
+                        <h3>Neki zadatak za danas!</h3>
+                    </div>
+                </div>
+                <!-- Jedan Task koji treba da se ponavlja sa WHILE -->
+                <!-- Jedan Task koji treba da se ponavlja sa WHILE -->
+                <div class="todo-single-task">
+                    <div class="task-icon">
+                        <!-- <div class="task-todo" id="todo"></div> -->
+                        <div class="task-done" id="done"><ion-icon name="checkmark-outline"></ion-icon></div>
+                    </div>
+                    <div class="task-text">
+                        <h3>Neki zadatak za danas!</h3>
+                    </div>
+                </div>
+                <!-- Jedan Task koji treba da se ponavlja sa WHILE -->
+                <!-- Jedan Task koji treba da se ponavlja sa WHILE -->
+                <div class="todo-single-task">
+                    <div class="task-icon">
+                        <div class="task-todo" id="todo"></div>
+                        <!-- <div class="task-done" id="done"><ion-icon name="checkmark-outline"></ion-icon></div> -->
+                    </div>
+                    <div class="task-text">
+                        <h3>Neki zadatak za danas!</h3>
+                    </div>
+                </div>
+                <!-- Jedan Task koji treba da se ponavlja sa WHILE -->
+
+
+            </div> 
+        </section>
+
+        <!-- Start of Add Task button -->
+        <section>
+            <div class="addBtn" id="addBtn">
+                <ion-icon name="add-outline"></ion-icon>
+            </div>
+        </section>
+        <!-- End of Add Task button -->
+
+    </div>
+    <!--Kraj Kartica sa ToDo Listom -->
+
 
 
     
-
-
-
+</div>
 
     <script src="script.js"></script>
 </body>
