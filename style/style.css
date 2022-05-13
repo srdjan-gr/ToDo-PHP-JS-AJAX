@@ -20,6 +20,7 @@
 
 
     --white: #f5f5f5;
+    --white-hover: #a5a5a5;
     --white-dim: #dfdfdf;
 
     --fontsize-s: 1rem;
@@ -407,6 +408,10 @@ label{
     font-size: 1.2rem;
     cursor: pointer;
 }
+
+.task-text h3:hover{
+    color: var(--white-hover);
+}
 /* End Kartica sa ToDo listom */
 
 
@@ -502,6 +507,10 @@ textarea{
     margin-bottom: 1.2rem;
 }
 
+textarea{
+    resize: none;
+}
+
 input,
 textarea:focus{
     outline: none;
@@ -528,12 +537,10 @@ textarea:focus{
 
 .addTask{
     background-color: var(--button-add);
-
 }
 
 .addTask:hover{
     background-color: var(--button-add-hover);
-
 }
 
 .resetTask{
