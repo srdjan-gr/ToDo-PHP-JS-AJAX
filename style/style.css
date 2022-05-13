@@ -73,7 +73,8 @@ body {
     border-radius: 4rem;
     flex-direction: column;
     justify-content: flex-start;
-    box-shadow: -10px 10px 20px rgba(0, 0, 0, .3);
+    box-shadow: -15px 10px 30px rgba(0, 0, 0, .3);
+    /* box-shadow: -10px 10px 20px rgba(0, 0, 0, .3); */
 }
 
 .back-icon ion-icon{
@@ -85,6 +86,11 @@ body {
     margin-top: 1.6rem;
     margin-bottom: 1rem;
     cursor: pointer;
+}
+
+.back-icon ion-icon:hover{
+    color: var(--secondary-dim);
+    transition: color .2s linear;
 }
 
 .user-image{
@@ -199,12 +205,12 @@ body {
 .cart-middle {
     background-color: var(--background);
     width: 30rem;
-    height: 54rem;
+    height: 62rem;
     padding: 2rem;
     flex-direction: column;
     justify-content: flex-start;
     position: absolute;
-    top: 4rem;
+    top: 0rem;
     left: 30rem;  
     z-index: 15;
 }
@@ -223,13 +229,9 @@ body {
     justify-content: flex-start;
     position: absolute;
     top: 0;
-    left: 0;  
-}
-
-#cardList{
-    display: block;
-    transform: translateX(22rem) scale(.86);
+    left: 0;     
     z-index: 13;
+    transform: scale(.86) translateX(25rem);
 }
 
 .todo-menu{
@@ -246,6 +248,11 @@ body {
     font-size: 1.8rem;
     color: var(--secondary-dim-light);
     cursor: pointer;
+}
+
+.todo-menu ion-icon:hover{
+    color: var(--white);
+    transition: color .2s linear;
 }
 
 .todo-menu .menu-left ion-icon{
