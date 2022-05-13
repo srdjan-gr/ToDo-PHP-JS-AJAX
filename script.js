@@ -27,3 +27,22 @@ todoMenu.addEventListener('click', () => {
         transition: transform .5s ease-out;
     `;
 })
+
+// Forma za unos taska
+let addBtn = document.getElementById('addBtn');
+let closeTask = document.getElementById('closeTask');
+let taskOverlay = document.getElementById('taskOverlay');
+
+addBtn.addEventListener('click', () => {
+
+    taskOverlay.style=`
+        transform: translateX(0rem);
+    `;
+})
+
+closeTask.addEventListener('click', () => {
+
+    taskOverlay.style=`
+        transform: translateX(30rem);
+    `;
+})
