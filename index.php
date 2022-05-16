@@ -8,6 +8,8 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="style/style.css">
 
 
@@ -115,7 +117,7 @@
 
                     <div class="categories-card">
                         <label for="">40 Task</label>
-                        <h2>Bussines</h2>
+                        <h2>Personal</h2>
                         <div class="progress-bars">
                            <div class="line-gray"></div>
                             <div class="line-progress-blue"></div> 
@@ -197,35 +199,41 @@
             </div>
         </section>
         <!-- End of Add Task button -->
-
-
-        <!-- Start forma za dodavanje taskova -->
-        <section>
-            <div class="task-form-overlay" id="taskOverlay">
-                <div class="task-content">
-                    <ion-icon name="close-outline" id="closeTask"></ion-icon>
-                    <label for="">Add Task</label>
-                    <div class="form">
-                        <input type="text" placeholder="Task Name">
-                        <textarea name="" id="" cols="2" rows="1"></textarea>
-                    </div>
-                    <div class="task-buttons">
-                        <button class="addTask" id="addTask">Add Task</button>
-                        <button class="resetTask" id="resetTask">Reset Task</button>
-                    </div>
-                </div> 
-            </div>
-        </section>
-        <!-- End forma za dodavanje taskova -->
-
     </div>
     <!--Kraj Kartica sa ToDo Listom -->
 
+    <!-- Start forma za dodavanje taskova -->
+    <section>
+        <div class="task-form-overlay" id="taskOverlay">
+            <div class="task-content">
+                <ion-icon name="close-outline" id="closeTask"></ion-icon>
+                <label for="">Add Task</label>
+                <div class="form">
+                    <input type="text" id="taskTitle" placeholder="Task Name">
+                    <textarea name="" id="taskText" cols="2" rows="1" placeholder="Task Text"></textarea>
+                    <select name="" id="taskKategorija">
+                        <option value="">Odaberi kategoriju zadatka</option>
+                        <option value="1">Licni</option>
+                        <option value="2">Poslovni</option>
+                    </select>
+                </div>
+                <div class="task-buttons">
+                    <button type='button' class="addTask" id="addTask">Add Task</button>
+                    <!-- <button class="resetTask" id="resetTask">Reset Task</button> -->
+                </div>
+            </div> 
+        </div>
+    </section>
+    <!-- End forma za dodavanje taskova -->
+
+    <!-- DIV za odgovore o akcojama -->
+    <div class="odgovor" id="odgovor"></div>
 
 
-    
 </div>
 
-    <script src="script.js"></script>
+    <script src="js/functionality.js"></script>
+    <script src="js/ajax_add.js"></script>
+    <!-- <script src="js/message.js"></script> -->
 </body>
 </html>

@@ -1,4 +1,4 @@
-// TRanzicija kartice sa Taskovima
+// Tranzicija kartice sa Taskovima
 let backBtn = document.getElementById('backBtn');
 let cardList = document.getElementById('cardList');
 let todoMenu = document.getElementById('todoMenu');
@@ -19,6 +19,7 @@ todoMenu.addEventListener('click', () => {
     `;
 })
 
+
 // Forma za unos taska
 let addBtn = document.getElementById('addBtn');
 let closeTask = document.getElementById('closeTask');
@@ -36,4 +37,20 @@ closeTask.addEventListener('click', () => {
     taskOverlay.style=`
         transform: translateX(30rem);
     `;
+
+    clearFields();
 })
+
+// Funkcija za brisanje polja
+function clearFields(){
+
+    let title = document.getElementById('taskTitle');
+    let text = document.getElementById('taskText');
+    let select = document.getElementById('taskKategorija');
+
+    if(closeTask){
+        title.value='';
+        text.value='';
+        select.value='';
+    }
+}
