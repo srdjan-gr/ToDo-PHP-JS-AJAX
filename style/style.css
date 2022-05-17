@@ -15,8 +15,8 @@
 
     --button-add: #2dcaa3;
     --button-add-hover: rgb(114, 228, 199);
-    --button-reset: #ed325a;
-    --button-reset-hover: rgb(235, 95, 125);
+    --button-danger: #ed325a;
+    --button-danger-hover: rgb(235, 95, 125);
 
     --white: #f5f5f5;
     --white-hover: #a5a5a5;
@@ -68,6 +68,7 @@ body {
     height: 100vh;
     display: grid;
     place-items: center;
+    overflow: hidden;
 }
 
 .container{
@@ -242,7 +243,7 @@ body {
     top: 0;
     left: 0;     
     z-index: 13;
-    transform: scale(.86) translateX(25.2rem);
+    /* transform: scale(.86) translateX(25.2rem); */
 }
 
 .todo-menu{
@@ -263,7 +264,7 @@ body {
 
 .todo-menu ion-icon:hover{
     color: var(--white);
-    transition: color .2s linear;
+    transition: color .1s linear;
 }
 
 .todo-menu .menu-left ion-icon{
@@ -358,25 +359,40 @@ label{
     width: 64%;
 }
 
+/* Single task section */
 .todo-list{
     /* width: 100%; */
-    height: 100%;
+    max-height: 26rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    overflow-y: auto;
+    margin-top: 2rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scrollbar-color: blue;
+}
+
+.todo-list::-webkit-scrollbar {
+    display: none;
+  }
+
+.todo-list label{
+    margin-bottom: 2rem;
 }
 
 .todo-single-task{
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    position: relative;
     margin-bottom: .6rem;
     width: 100%;
     height: 4.8rem;
     padding: 1.2rem;
     background-color: var(--primary);
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, .5);
+    /* box-shadow: 2px 2px 12px rgba(0, 0, 0, .5); */
     border-radius: 1.5rem;
 }
 
@@ -417,6 +433,20 @@ label{
 .task-text h3:hover{
     color: var(--white-hover);
 }
+
+.deleteTask{
+    font-size: 1.6rem;
+    color: var(--secondary-dim-light);
+    cursor: pointer;
+    position: absolute;
+    top: 1.6rem;
+    right: 1rem;
+}
+
+.deleteTask:hover{
+    color: var(--button-danger-hover);
+    transition: color .1s linear;
+}
 /* End Kartica sa ToDo listom */
 
 
@@ -431,8 +461,8 @@ label{
     align-items: center;
     justify-content: center;
     position: absolute;
-    bottom: 2.6rem;
-    right: 2rem;
+    bottom: 2rem;
+    right: 3.8rem;
     cursor: pointer;
 }
 

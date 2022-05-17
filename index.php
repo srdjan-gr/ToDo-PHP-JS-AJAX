@@ -129,65 +129,25 @@
         
         <!-- Sekcija ToDO lista zadataka -->
         <section>
-            <div class="todo-list">
-                <label for="" >Today's tasks</label>
-
-                <!-- Jedan Task koji treba da se ponavlja sa WHILE -->
-                <div class="todo-single-task">
-                    <div class="task-icon">
-                        <div class="task-todo" id="todo"></div>
-                        <!-- <div class="task-done" id="done"><ion-icon name="checkmark-outline"></ion-icon></div> -->
-                    </div>
-                    <div class="task-text">
-                        <h3>Neki zadatak za danas!</h3>
-                    </div>
+        <div class="task-label">
+                    <label for="todoList" >Today's tasks</label>
                 </div>
-                <!-- Jedan Task koji treba da se ponavlja sa WHILE -->
-                <!-- Jedan Task koji treba da se ponavlja sa WHILE -->
-                <div class="todo-single-task">
-                    <div class="task-icon">
-                        <!-- <div class="task-todo" id="todo"></div> -->
-                        <div class="task-done" id="done"><ion-icon name="checkmark-outline"></ion-icon></div>
-                    </div>
-                    <div class="task-text">
-                        <h3>Neki zadatak za danas!</h3>
-                    </div>
-                </div>
-                <!-- Jedan Task koji treba da se ponavlja sa WHILE -->
-                <!-- Jedan Task koji treba da se ponavlja sa WHILE -->
-                <div class="todo-single-task">
-                    <div class="task-icon">
-                        <div class="task-todo" id="todo"></div>
-                        <!-- <div class="task-done" id="done"><ion-icon name="checkmark-outline"></ion-icon></div> -->
-                    </div>
-                    <div class="task-text">
-                        <h3>Neki zadatak za danas!</h3>
-                    </div>
-                </div>
-                <!-- Jedan Task koji treba da se ponavlja sa WHILE -->
-                <!-- Jedan Task koji treba da se ponavlja sa WHILE -->
-                <div class="todo-single-task">
-                    <div class="task-icon">
-                        <!-- <div class="task-todo" id="todo"></div> -->
-                        <div class="task-done" id="done"><ion-icon name="checkmark-outline"></ion-icon></div>
-                    </div>
-                    <div class="task-text">
-                        <h3>Neki zadatak za danas!</h3>
-                    </div>
-                </div>
-                <!-- Jedan Task koji treba da se ponavlja sa WHILE -->
-                <!-- Jedan Task koji treba da se ponavlja sa WHILE -->
-                <div class="todo-single-task">
-                    <div class="task-icon">
-                        <div class="task-todo" id="todo"></div>
-                        <!-- <div class="task-done" id="done"><ion-icon name="checkmark-outline"></ion-icon></div> -->
-                    </div>
-                    <div class="task-text">
-                        <h3>Neki zadatak za danas!</h3>
-                    </div>
-                </div>
-                <!-- Jedan Task koji treba da se ponavlja sa WHILE -->
-
+            <div class="todo-list" id="todoList">
+                
+                
+       
+                    <!-- Jedan Task koji treba da se ponavlja sa WHILE petljim u JS -->
+                    <!-- <div class="todo-single-task" id="singleTask">
+                        <div class="task-icon">
+                            <div class="task-todo" id="todo"></div>
+                            <div class="task-done" id="done"><ion-icon name="checkmark-outline"></ion-icon></div>
+                        </div>
+                        <div class="task-text" id="taskTekst">
+                            <h3>Neki zadatak za danas!</h3>
+                        </div>
+                        <ion-icon class="deleteTask" id="deleteTask" name="trash-outline"></ion-icon>
+                    </div> -->
+                    <!-- Jedan Task koji treba da se ponavlja sa WHILE -->
 
             </div> 
         </section>
@@ -229,11 +189,11 @@
     <!-- DIV za odgovore o akcojama -->
     <div class="odgovor" id="odgovor"></div>
 
-
 </div>
 
     <script src="js/functionality.js"></script>
     <script src="js/ajax_add.js"></script>
+    <script src="js/ajax_select.js"></script>
     <!-- <script src="js/message.js"></script> -->
 </body>
 </html>

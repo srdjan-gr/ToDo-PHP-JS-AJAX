@@ -20,7 +20,7 @@ $(function(){
 
                     poruka();
                     odgovor.innerHTML="<p class='odgovor-uspeh'>Task uspesno dodat.</p>"; 
-                    setInterval(sakrijPoruku, 3500);
+                    setInterval(sakrijPoruku, 3000);
 
                     let taskOverlay = document.getElementById('taskOverlay');
                     taskOverlay.style=`
@@ -60,9 +60,7 @@ function poruka(){
 }
 
 function sakrijPoruku(){
-    
     odgovor.style=`transform:translateX(0rem);`;
-
 }
 
 
