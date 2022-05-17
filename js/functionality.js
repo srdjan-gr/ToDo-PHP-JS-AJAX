@@ -1,4 +1,4 @@
-// Tranzicija kartice sa Taskovima
+// Task card transitiopn
 let backBtn = document.getElementById('backBtn');
 let cardList = document.getElementById('cardList');
 let todoMenu = document.getElementById('todoMenu');
@@ -20,7 +20,7 @@ todoMenu.addEventListener('click', () => {
 })
 
 
-// Forma za unos taska
+// Task add Form
 let addBtn = document.getElementById('addBtn');
 let closeTask = document.getElementById('closeTask');
 let taskOverlay = document.getElementById('taskOverlay');
@@ -41,7 +41,7 @@ closeTask.addEventListener('click', () => {
     clearFields();
 })
 
-// Funkcija za brisanje polja
+// Delete fields function
 function clearFields(){
 
     let title = document.getElementById('taskTitle');
@@ -54,3 +54,15 @@ function clearFields(){
         select.value='';
     }
 }
+
+// Theme container toggle switch
+let themeBtn = document.getElementById('themeBtn');
+let themeContainer = document.getElementById('theme');
+
+themeBtn.addEventListener('click', (e) => {
+
+    themeContainer.classList.toggle('active-theme');
+
+});
+
+

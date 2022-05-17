@@ -276,6 +276,56 @@ body {
     --ionicon-stroke-width: 4rem;
 }
 
+/* Start Theme Container */
+.theme-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    top: 7rem;
+    right: 10rem;
+    background-color: var(--primary);
+    border-radius: 1.2rem;
+    padding: 1rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .2);
+    font-size: 1.4rem;
+    display: none;
+
+}
+
+/* Active class for toggle event */
+.active-theme{
+    display: flex;
+}
+
+.theme-selector{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.theme-selector:hover,
+.theme-selector h3:hover{
+    color: var(--white-hover);
+}
+
+.theme-selector:last-child{
+    padding: 0;
+}
+
+.theme-selector h3{
+    color: var(--white);
+    font-size: 1.2rem;
+    margin-left: 1.2rem;
+}
+
+
+/* End Theme Container */
+
 .todo-user{
     width: 100%;
 }
@@ -462,7 +512,7 @@ label{
     justify-content: center;
     position: absolute;
     bottom: 2rem;
-    right: 3.8rem;
+    right: 4.8rem;
     cursor: pointer;
 }
 

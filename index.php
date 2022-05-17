@@ -89,11 +89,18 @@
                     <!-- <ion-icon name="pause-outline"></ion-icon> -->
                 </div>
                 <div class="menu-right">
+                    <ion-icon name="sunny-outline" id="themeBtn"></ion-icon>
                     <ion-icon name="search-outline"></ion-icon>
                     <ion-icon name="notifications-outline"></ion-icon>
                 </div>
             </div>
         </nav>
+
+        <div class="theme-container" id="theme">
+            <div class="theme-selector"><ion-icon name="sunny-outline"></ion-icon><h3>light</h3></div>
+            <div class="theme-selector"><ion-icon name="moon-outline"></ion-icon><h3>Dark</h3></div>
+            <div class="theme-selector"><ion-icon name="desktop-outline"></ion-icon><h3>Sytem</h3></div>
+        </div>
         
         <header>
             <div class="todo-user">
@@ -127,30 +134,16 @@
             </div>
         </section>
         
-        <!-- Sekcija ToDO lista zadataka -->
+        <!-- Start Sekcija ToDO listom zadataka -->
         <section>
         <div class="task-label">
                     <label for="todoList" >Today's tasks</label>
                 </div>
             <div class="todo-list" id="todoList">
-                
-                
-       
-                    <!-- Jedan Task koji treba da se ponavlja sa WHILE petljim u JS -->
-                    <!-- <div class="todo-single-task" id="singleTask">
-                        <div class="task-icon">
-                            <div class="task-todo" id="todo"></div>
-                            <div class="task-done" id="done"><ion-icon name="checkmark-outline"></ion-icon></div>
-                        </div>
-                        <div class="task-text" id="taskTekst">
-                            <h3>Neki zadatak za danas!</h3>
-                        </div>
-                        <ion-icon class="deleteTask" id="deleteTask" name="trash-outline"></ion-icon>
-                    </div> -->
-                    <!-- Jedan Task koji treba da se ponavlja sa WHILE -->
-
+            <!-- Kontejner gde se iz JS-a ubacuje DIV sa pojedinacnim taskovima -->
             </div> 
         </section>
+        <!-- End Sekcija ToDO listom zadataka -->
 
         <!-- Start of Add Task button -->
         <section>
@@ -192,8 +185,6 @@
 </div>
 
     <script src="js/functionality.js"></script>
-    <script src="js/ajax_add.js"></script>
-    <script src="js/ajax_select.js"></script>
-    <!-- <script src="js/message.js"></script> -->
+    <script src="js/ajax.js"></script>
 </body>
 </html>
