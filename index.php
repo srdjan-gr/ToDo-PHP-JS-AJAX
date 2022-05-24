@@ -16,7 +16,9 @@
     <title>ToDo</title>
 </head>
 <body>
-    
+    <!-- Test div za prikaz JSON string -->
+<!-- <div class="response" id="response"> </div> -->
+
 <div class="container">
 
     <section>
@@ -179,10 +181,13 @@
     </section>
     <!-- End forma za dodavanje taskova -->
 
-    <!-- DIV za odgovore o akcojama -->
+    <!-- DIV za odgovore o akcijama -->
     <div class="odgovor" id="odgovor"></div>
 
 </div>
+
+
+
 
     <script src="js/functionality.js"></script>
     <script src="js/ajax.js"></script>

@@ -66,3 +66,19 @@ themeBtn.addEventListener('click', (e) => {
 });
 
 
+// Translation
+// $(function(){
+
+//     $('#jezik').change(function(){
+
+//         alert($(this).val());
+
+//         // val ako je aktivan element za selektovanje jezika - Select Option na primer
+//         let jezik = $(this).val();
+
+//         $("[data-"+jezik+"]").each(function(){
+//             $(this).html($(this).data(jezik));      
+//         })
+//     })
+// })
+

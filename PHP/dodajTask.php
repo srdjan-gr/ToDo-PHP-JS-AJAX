@@ -8,7 +8,7 @@ $funkcija = $_GET['funkcija'];
 $poruka['uspesno'] = "";
 $poruka['greska'] = "";
 
-if($funkcija=='dodaj'){
+if($funkcija=='dodajTask'){
 
     $task_ime = $_POST['task_ime'];
     $task_text = $_POST['task_text'];

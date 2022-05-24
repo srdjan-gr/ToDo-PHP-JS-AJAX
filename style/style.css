@@ -29,8 +29,8 @@
     --fontsize-l: 1.6rem;
     --fontsize-xl: 2.4rem;
 
-    --message-success:rgba(50, 237, 190, 0.9);
-    --message-error:rgba(237, 50, 90, 0.9);
+    --message-success:rgba(50, 237, 190, 0.95);
+    --message-error:rgba(237, 50, 90, 0.95);
 
 }
 
@@ -219,6 +219,7 @@ body {
     width: 30rem;
     height: 62rem;
     padding: 2rem;
+    /* border-radius: 3.6rem; */
     flex-direction: column;
     justify-content: flex-start;
     position: absolute;
@@ -293,7 +294,6 @@ body {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .2);
     font-size: 1.4rem;
     display: none;
-
 }
 
 /* Active class for toggle event */
@@ -421,7 +421,6 @@ label{
     margin-top: 2rem;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    scrollbar-color: blue;
 }
 
 .todo-list::-webkit-scrollbar {
@@ -489,8 +488,8 @@ label{
     color: var(--secondary-dim-light);
     cursor: pointer;
     position: absolute;
-    top: 1.6rem;
-    right: 1rem;
+    top: 1.5rem;
+    right: 1.5rem;
 }
 
 .deleteTask:hover{
@@ -659,7 +658,7 @@ select::placeholder{
 /* End of Task form */
 
 
-/* Start Div za Odgovore */
+/* Start Popup Div za Odgovore */
 .odgovor{
     display: flex;
     align-items: center;
@@ -668,7 +667,7 @@ select::placeholder{
     height: 5rem;
     border-radius: 1.6rem;
     position: absolute;
-    top: 1rem;
+    top: 3.2rem;
     right: -22rem;
     z-index: 18;
     transition: transform .3s ease-out;
@@ -692,4 +691,10 @@ select::placeholder{
     font-size: var(--fontsize-l);
     border-radius: 1.6rem;
 }
-/* End Div za Odgovore */
+
+/* .response{
+    height: 5rem;
+    width: 20rem;
+    background-color: #2dcaa3;
+} */
+/* End Popup Div za Odgovore */
