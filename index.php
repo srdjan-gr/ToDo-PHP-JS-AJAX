@@ -17,7 +17,7 @@
 </head>
 <body>
     <!-- Test div za prikaz JSON string -->
-<!-- <div class="response" id="response"> </div> -->
+<div class="response" id="response"> </div>
 
 <div class="container">
 
@@ -114,24 +114,8 @@
             <div class="todo-categories">
                 <label for="" >Categories</label>
 
-                <div class="todo-containers">
-                    <div class="categories-card" id="bussines">
-                        <label for="">40 Task</label>
-                        <h2>Bussines</h2>
-                        <div class="progress-bars">
-                            <div class="line-gray"></div>
-                             <div class="line-progress-pink"></div> 
-                         </div>
-                    </div>
-
-                    <div class="categories-card">
-                        <label for="">40 Task</label>
-                        <h2>Personal</h2>
-                        <div class="progress-bars">
-                           <div class="line-gray"></div>
-                            <div class="line-progress-blue"></div> 
-                        </div>
-                    </div>
+                <div class="todo-containers" id="todoContainers">
+                    <!-- Data is displayd from JS  -->
                 </div>
             </div>
         </section>

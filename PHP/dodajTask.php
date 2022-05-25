@@ -35,4 +35,4 @@ if($funkcija=='dodajTask'){
 
 }
 
-
+mysqli_close($db);

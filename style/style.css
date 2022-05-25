@@ -12,6 +12,7 @@
     --accent-3: #32edbe;
     --accent-4: #2c7ae7;
     --accent-5: #3280ed;
+    --accent-6: #ed7732;
 
     --button-add: #2dcaa3;
     --button-add-hover: rgb(114, 228, 199);
@@ -69,6 +70,7 @@ body {
     display: grid;
     place-items: center;
     overflow: hidden;
+    position: relative;
 }
 
 .container{
@@ -338,7 +340,7 @@ body {
 label{
     text-transform: uppercase;
     color: var(--secondary-dim-light);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     letter-spacing: 1px;
 }
 
@@ -357,6 +359,7 @@ label{
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    padding: 0 .5rem 0 .5rem;
 }
 
 .categories-card label{
@@ -391,9 +394,9 @@ label{
     width: 100%;
 }
 
-.line-progress-pink{
-    border: 1px solid var(--accent-1);
-    box-shadow: 2px 0px 5px 1px rgba(239, 65, 255, 0.5);
+.line-progress-orange{
+    border: 1px solid var(--accent-6);
+    box-shadow: 2px 0px 5px 1px rgba(237, 119, 50, 0.5);
     position: absolute;
     bottom: 0rem;
     left: 0rem;
@@ -412,15 +415,17 @@ label{
 /* Single task section */
 .todo-list{
     /* width: 100%; */
-    max-height: 26rem;
+    max-height: 27rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     overflow-y: auto;
-    margin-top: 2rem;
+    margin-top: 1rem;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    /* padding: 0 .5rem 0 .5rem; */
+    padding: .5rem;
 }
 
 .todo-list::-webkit-scrollbar {
@@ -467,6 +472,7 @@ label{
     border: 2px solid var(--accent-3);
     box-shadow: 0px 0px 1px 1px rgba(50, 237, 190, 0.5);
     --ionicon-stroke-width: 5rem;
+    
 }
 
 .task-icon .task-done ion-icon{
@@ -477,7 +483,13 @@ label{
     width: 100%;
     font-size: 1.2rem;
     cursor: pointer;
+    
 }
+
+/* .task-text h3{
+    text-decoration: line-through;
+    opacity: 0;
+} */
 
 .task-text h3:hover{
     color: var(--white-hover);
@@ -495,6 +507,33 @@ label{
 .deleteTask:hover{
     color: var(--button-danger-hover);
     transition: color .1s linear;
+}
+
+.category-task-private{
+    position: absolute;
+    left: -.1rem;
+    top: -.1rem;
+    z-index: 5;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 2px solid var(--accent-6);
+    box-shadow: 2px 0px 5px 1px rgba(237, 119, 50, 0.5);
+    border-radius: 4rem;
+    opacity: .8;
+}
+
+
+.category-task-work{
+    position: absolute;
+    left: -.1rem;
+    top: -.1rem;
+    z-index: 5;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 2px solid var(--accent-5);
+    box-shadow: 2px 0px 5px 1px rgba(50, 128, 237, 0.5);
+    border-radius: 4rem;
+    opacity: .8;
 }
 /* End Kartica sa ToDo listom */
 
@@ -517,7 +556,7 @@ label{
 
 .addBtn:hover{
     transform: scale(1.05);
-    transition: .2s linear;
+    transition: .1s linear;
 }
 
 .addBtn ion-icon{

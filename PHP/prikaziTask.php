@@ -12,3 +12,5 @@ if($funkcija=='prikaz'){
     echo json_encode($odgovor, 256);
 
 }
+
+mysqli_close($db);

@@ -24,3 +24,5 @@ if($funkcija=="obrisi"){
     // }
 }
 
+mysqli_close($db);
+

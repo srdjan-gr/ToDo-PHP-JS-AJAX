@@ -1,5 +1,6 @@
 $(function(){
 
+    priakazKategorije();
     prikaziTask();
 
     $('#addTask').click(function(){
@@ -70,21 +71,29 @@ function prikaziTask(){
 
     $.get('php/prikaziTask?funkcija=prikaz', function(response){
                     
-        $('#response').html(response);
+        // $('#response').html(response);
 
         let odgovorIzPhp = JSON.parse(response);
         let izlaz = "";
-
+        console.log(odgovorIzPhp);
         for(task of odgovorIzPhp){
 
             izlaz+="<div class='todo-single-task' id='singleTask' >";
-            
+
+                if(task.task_kategorija_id==1){
+                   izlaz+="<div class='category-task-private'></div>"; 
+                }else{
+                   izlaz+="<div class='category-task-work'></div>"; 
+                }
+                
                 izlaz+= "<div class='task-icon' id='taskIcon'>" 
                 
-                    izlaz+= "<div class='task-todo' id='todo'></div>";  
-
-                    // izlaz+= "<div class='task-done' id='done'><ion-icon name='checkmark-outline'></ion-icon></div>";  
-                
+                    if(task.uradjen==0){
+                        izlaz+= "<div class='task-todo' id='todo'></div>"; 
+                    }else{
+                        izlaz+= "<div class='task-done' id='done'><ion-icon name='checkmark-outline'></ion-icon></div>";  
+                    }
+                     
                 izlaz+="</div>";
 
                 izlaz+= "<div class='task-text' id='tasktext'   data-ime='"+task.task_ime+"' data-text='"+task.task_text+"'>" + "<h3>" +task.task_ime+ "</h3>" + "</div>";
@@ -119,5 +128,45 @@ function obrisiTask(taskId){
 }
 
 
+// Tasks Category function
+function priakazKategorije(){
 
+    $.get('php/kategorije?funkcija=taskKategorija', function(response){
+
+        // $('#response').html(response);
+
+        let odgovorTask = JSON.parse(response);
+        let izlaz = '';
+
+        console.log(odgovorTask);
+
+        for(kategorija of odgovorTask){
+
+            izlaz+= '<div class="categories-card" id="bussines">'
+            
+                izlaz+='<label for="">40 Tasks</label>';
+                izlaz+='<h2 data-SR='+kategorija.kategorija_ime_SR+' data-EN='+kategorija.kategorija_ime_EN+'>'+kategorija.kategorija_ime_SR+'</h2>';
+
+                izlaz+='<div class="progress-bars">'
+                
+                    izlaz+='<div class="line-gray"></div>';
+
+                    if(kategorija.id==1){
+                      izlaz+='<div class="line-progress-orange"></div>';  
+                    }else{
+                      izlaz+='<div class="line-progress-blue"></div>';  
+                    }
+
+                izlaz+='</div>';
+            
+            izlaz+='</div>';
+
+
+
+        }
+
+        $('#todoContainers').html(izlaz);
+
+    })
+}
 
