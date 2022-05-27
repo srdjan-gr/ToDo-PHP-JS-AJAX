@@ -80,7 +80,7 @@ body {
 /* Start Kartica sa opcijama */
 .cart-options {
     background-color: var(--primary);
-    width: 30rem;
+    width: 32rem;
     height: 62rem;
     padding: 3.6rem;
     border-radius: 4rem;
@@ -218,7 +218,7 @@ body {
 .cart-middle {
     background-color: var(--background);
     /* opacity: 0; */
-    width: 30rem;
+    width: 32rem;
     height: 62rem;
     padding: 2rem;
     /* border-radius: 3.6rem; */
@@ -226,8 +226,9 @@ body {
     justify-content: flex-start;
     position: absolute;
     top: 0rem;
-    left: 30rem;  
+    left: 32rem;  
     z-index: 20;
+    /* display: none; */
 }
 /* Kraj desna kartica
 /* ======================================================================= */
@@ -236,7 +237,7 @@ body {
 /* Start Kartica sa ToDo listom */
 .cart-list {
     background-color: var(--secondary);
-    width: 30rem;
+    width: 32rem;
     height: 62rem;
     padding: 2rem;
     border-radius: 4rem;
@@ -519,7 +520,7 @@ label{
     border: 2px solid var(--accent-6);
     box-shadow: 2px 0px 5px 1px rgba(237, 119, 50, 0.5);
     border-radius: 4rem;
-    opacity: .8;
+    opacity: .7;
 }
 
 
@@ -533,7 +534,7 @@ label{
     border: 2px solid var(--accent-5);
     box-shadow: 2px 0px 5px 1px rgba(50, 128, 237, 0.5);
     border-radius: 4rem;
-    opacity: .8;
+    opacity: .7;
 }
 /* End Kartica sa ToDo listom */
 
@@ -575,7 +576,7 @@ label{
     border-radius: 4rem;
     padding: 2rem;
     background-color: rgba(0, 0, 0, 0.85);
-    transform: translateX(30rem);
+    transform: translateX(32rem);
     transition: transform .4s ease-out;
 }
 

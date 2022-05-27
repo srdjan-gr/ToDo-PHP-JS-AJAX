@@ -14,7 +14,7 @@ backBtn.addEventListener('click', () => {
 todoMenu.addEventListener('click', () => {
 
     cardList.style=`
-        transform: translateX(22rem) scale(.86);
+        transform: translateX(23rem) scale(.86);
         transition: transform .5s ease-out;
     `;
 })
@@ -35,7 +35,7 @@ addBtn.addEventListener('click', () => {
 closeTask.addEventListener('click', () => {
 
     taskOverlay.style=`
-        transform: translateX(30rem);
+        transform: translateX(32rem);
     `;
 
     clearFields();
