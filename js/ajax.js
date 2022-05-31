@@ -24,7 +24,7 @@ $(function(){
 
                     let taskOverlay = document.getElementById('taskOverlay');
                     taskOverlay.style=`
-                        transform: translateX(30rem);
+                        transform: translateX(32rem);
                     `;
                 } 
             )
@@ -55,7 +55,7 @@ let odgovor = document.getElementById('odgovor');
 function poruka(){
     if(odgovor){
         odgovor.style=`
-            transform:translateX(-26rem);
+            transform:translateX(-27rem);
         `;
     }
 

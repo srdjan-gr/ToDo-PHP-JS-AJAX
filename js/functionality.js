@@ -14,7 +14,7 @@ backBtn.addEventListener('click', () => {
 todoMenu.addEventListener('click', () => {
 
     cardList.style=`
-        transform: translateX(23rem) scale(.86);
+        transform: translateX(23.5rem) scale(.86);
         transition: transform .5s ease-out;
     `;
 })
